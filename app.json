@@ -1,0 +1,25 @@
+{
+  "name": "pusher-channels-auth-example",
+  "description": "Simple example of an auth server for pusher channels",
+  "keywords": [
+    "pusher",
+    "channels"
+  ],
+  "repository": "https://github.com/pusher/pusher-channels-auth-example",
+  "image": "heroku/nodejs",
+  "env": {
+    "APP_ID": {
+      "description": "AppId from the pusher dashboard"
+    },
+    "APP_KEY": {
+      "description": "AppKey from the pusher dashboard"
+    },
+
+    "APP_SECRET": {
+      "description": "AppSecret from the pusher dashboard"
+    },
+    "CLUSTER": {
+      "description": "Cluster from the pusher dashboard"
+    }
+  }
+}
