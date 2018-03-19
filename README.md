@@ -2,15 +2,19 @@
 
 This project aims to demonstrate how to implement a
 [Pusher](https://pusher.com) authorization endpoint using the
-[pusher-http-node](https://github.com/pusher/pusher-http-node) library.
+[pusher-http-node](https://github.com/pusher/pusher-http-node) library. There's
+no concept of users - a valid token is provided to every request - so this
+shouldn't be used in production.
 
 ## Some Assembly Required
-**BEFORE you run this project** you'll need an `appId`, `appKey`, `appSecret` and `cluster` for
-Pusher. You can get these from the keys tab of your [pusher dashboard](https://dashboard.pusher.com)
+**BEFORE you run this project** you'll need an `appId`, `appKey`, `appSecret`
+and `cluster` for Pusher. You can get these from the keys tab of your [pusher
+dashboard](https://dashboard.pusher.com)
 
 ## Deploy to Heroku
 
-You'll need to insert your `appId`, `appKey`, `appSecret` and `cluster` when deploying your app.
+You'll need to insert your `appId`, `appKey`, `appSecret` and `cluster` when
+deploying your app.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/pusher/pusher-channels-auth-example)
 
@@ -22,10 +26,11 @@ Make a copy of the `.env.example` file.
 cp .env.example .env
 ```
 
-Add your `appId`, `appKey`, `appSecret` and `cluster` to the newly created `.env` file.
+Add your `appId`, `appKey`, `appSecret` and `cluster` to the newly created
+`.env` file.
 
-When you have a `.env` file containing a valid `APP_ID` `APP_KEY`, `APP_SECRET` and `CLUSTER`
-you're ready to run.
+When you have a `.env` file containing a valid `APP_ID` `APP_KEY`, `APP_SECRET`
+and `CLUSTER` you're ready to run.
 
 ```
 yarn
