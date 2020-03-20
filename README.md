@@ -43,5 +43,5 @@ That's it. You can test everything works by sending a `POST` request to
 ```
 curl -X POST http://localhost:3030/pusher/auth \
   -H "Content-Type: application/json" \
-  -d '{"socket_id": "100.100", "channel_name": "private-document"}'
+  -d '{"socket_id": "100.100", "channel_name": "private-encrypted-document"}'
 ```
