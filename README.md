@@ -43,5 +43,19 @@ That's it. You can test everything works by sending a `POST` request to
 ```
 curl -X POST http://localhost:3030/pusher/auth \
   -H "Content-Type: application/json" \
+  -d '{"socket_id": "100.100", "channel_name": "private-document"}'
+```
+
+## Using E2E encryption
+
+To test E2E encryption, generate a random 32 byte master key and add it to
+your `.env` as `ENCRYPTION_MASTER_KEY`, then use a channel with an encrypted
+name prefix, e.g.
+
+```
+curl -X POST http://localhost:3030/pusher/auth \
+  -H "Content-Type: application/json" \
   -d '{"socket_id": "100.100", "channel_name": "private-encrypted-document"}'
 ```
+
+The response should contain an additional `shared_secret` key and value.
