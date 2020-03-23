@@ -6,12 +6,19 @@ const htmlGenerator = require('./html-generator');
 
 const app = express();
 const port = config.PORT || 3030;
-const pusher = new Pusher({
+
+var pusherSdkArgs = {
   appId: config.APP_ID,
   key: config.APP_KEY,
   secret: config.APP_SECRET,
   cluster: config.CLUSTER,
-});
+};
+
+if (config.ENCRYPTION_MASTER_KEY) {
+  pusherSdkArgs.encryptionMasterKey = config.ENCRYPTION_MASTER_KEY;
+}
+
+const pusher = new Pusher(pusherSdkArgs);
 
 const debug = (...args) => {
   if (config.DEBUG) {
