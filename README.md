@@ -48,9 +48,9 @@ curl -X POST http://localhost:3030/pusher/auth \
 
 ## Using E2E encryption
 
-To test E2E encryption, generate a random 32 byte master key and add it to
-your `.env` as `ENCRYPTION_MASTER_KEY`, then use a channel with an encrypted
-name prefix, e.g.
+To test E2E encryption, generate a random 32 byte master key, base64 encode it
+and add it to your `.env` as `ENCRYPTION_MASTER_KEY`, then use a channel with
+an encrypted name prefix, e.g.
 
 ```
 curl -X POST http://localhost:3030/pusher/auth \
@@ -59,3 +59,9 @@ curl -X POST http://localhost:3030/pusher/auth \
 ```
 
 The response should contain an additional `shared_secret` key and value.
+
+A suitable key can be generated like this:
+
+```
+openssl rand -base64 32
+```

@@ -15,7 +15,7 @@ var pusherSdkArgs = {
 };
 
 if (config.ENCRYPTION_MASTER_KEY) {
-  pusherSdkArgs.encryptionMasterKey = config.ENCRYPTION_MASTER_KEY;
+  pusherSdkArgs.encryptionMasterKeyBase64 = config.ENCRYPTION_MASTER_KEY;
 }
 
 const pusher = new Pusher(pusherSdkArgs);
