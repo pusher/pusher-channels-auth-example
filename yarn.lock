@@ -386,6 +386,11 @@ ipaddr.js@1.9.1:
   resolved "https://registry.yarnpkg.com/ipaddr.js/-/ipaddr.js-1.9.1.tgz#bff38543eeb8984825079ff3a2a8e6cbd46781b3"
   integrity sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g==
 
+is-base64@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/is-base64/-/is-base64-1.1.0.tgz#8ce1d719895030a457c59a7dcaf39b66d99d56b4"
+  integrity sha512-Nlhg7Z2dVC4/PTvIFkgVVNvPHSO2eR/Yd0XzhGiXCXEvWnptXlXa/clQ8aePPiMuxEGcWfzWbGw2Fe3d+Y3v1g==
+
 is-typedarray@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-typedarray/-/is-typedarray-1.0.0.tgz#e479c80858df0c1b11ddda6940f96011fcda4a9a"
@@ -523,12 +528,13 @@ punycode@^2.1.0:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
-pusher@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/pusher/-/pusher-3.0.0.tgz#710be1c534b0d834978d3abb2f27146b87adaf0c"
-  integrity sha512-r7oKdjs+BbUijyWE2MBUzsdLh7cG8HRJhHqLyPRTchV6JjLwKaRVHKAc0k4lGNuWflEqk2S31ph0VQnBoGDi8g==
+pusher@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/pusher/-/pusher-3.0.1.tgz#9fbed49cf0f9ee9879ae6b75a38f8dda7a98eded"
+  integrity sha512-jrI4N33paSh1vsYvEJx7QmXbf/zeeHIeoEAREqj4i2jJdK5I2FxhS96DsRl8+iwBJcsnk6TMMbfIrDniAFs5AA==
   dependencies:
     "@types/request" "^2.47.1"
+    is-base64 "^1.1.0"
     request "2.88.0"
     tweetnacl "^1.0.0"
     tweetnacl-util "^0.15.0"
