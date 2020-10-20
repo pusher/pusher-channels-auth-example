@@ -1,9 +1,9 @@
 const DEFAULT_ENDPOINT = '/pusher/auth';
-const {APP_ID, APP_KEY, APP_SECRET, CLUSTER, PORT, DEBUG, ENCRYPTION_MASTER_KEY} = process.env;
+const {APP_ID, APP_KEY, APP_SECRET, CLUSTER, CHANNELS_HOST, CHANNELS_PORT, PORT, DEBUG, ENCRYPTION_MASTER_KEY} = process.env;
 const ENDPOINT = process.env.ENDPOINT || DEFAULT_ENDPOINT;
-const config = {APP_ID, APP_KEY, APP_SECRET, CLUSTER, PORT, DEBUG, ENDPOINT, ENCRYPTION_MASTER_KEY};
+const config = {APP_ID, APP_KEY, APP_SECRET, CHANNELS_HOST, CHANNELS_PORT, CLUSTER, PORT, DEBUG, ENDPOINT, ENCRYPTION_MASTER_KEY};
 
-const requiredKeys = ['APP_ID', 'APP_KEY', 'APP_SECRET', 'CLUSTER'];
+const requiredKeys = ['APP_ID', 'APP_KEY', 'APP_SECRET'];
 requiredKeys.forEach(key => {
   if (config[key]) return;
   throw new Error(getMissingKeyErrorString(key));

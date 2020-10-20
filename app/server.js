@@ -11,9 +11,17 @@ var pusherSdkArgs = {
   appId: config.APP_ID,
   key: config.APP_KEY,
   secret: config.APP_SECRET,
-  cluster: config.CLUSTER,
 };
 
+if (config.CLUSTER) {
+  pusherSdkArgs.cluster = config.CLUSTER;
+}
+if (config.CHANNELS_HOST) {
+  pusherSdkArgs.host = config.CHANNELS_HOST;
+}
+if (config.CHANNELS_PORT) {
+  pusherSdkArgs.port = config.CHANNELS_PORT;
+}
 if (config.ENCRYPTION_MASTER_KEY) {
   pusherSdkArgs.encryptionMasterKeyBase64 = config.ENCRYPTION_MASTER_KEY;
 }
