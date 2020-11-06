@@ -19,7 +19,16 @@
       "description": "AppSecret from the pusher dashboard"
     },
     "CLUSTER": {
-      "description": "Cluster from the pusher dashboard"
+      "description": "Cluster from the pusher dashboard",
+      "required": false
+    },
+    "CHANNELS_HOST": {
+      "description": "Custom hostname of a channels cluster. Overrides `CLUSTER`",
+      "required": false
+    },
+    "CHANNELS_PORT": {
+      "description": "Custom port of a channels cluster. Used in conjunction with `HOST`",
+      "required": false
     }
   }
 }
